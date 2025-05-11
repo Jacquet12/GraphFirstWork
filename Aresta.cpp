@@ -3,7 +3,11 @@
 Aresta::Aresta(int origem, int destino, char tipo) {
     this->origem = origem;
     this->destino = destino;
-    this->ataca = (tipo == 'A');
+    if (tipo == 'N') {
+        this->ataca = false;
+    } else if (tipo == 'A') {
+        this->ataca = true;
+    }
 }
 
 int Aresta::getOrigem() {
