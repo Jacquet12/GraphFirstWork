@@ -7,20 +7,20 @@
  * Matricula: XXXX
  */
 
- #ifndef ARESTA_H
-
- #define ARESTA_H
+#ifndef ARESTA_H
+#define ARESTA_H
  
- #include <string>
+class Aresta {
+    private:
+        int origem;
+        int destino;
+        bool ataca;
  
- class Aresta {
- public:
-    const int v1;
-    const int v2;
+    public:
+        Aresta(int origem, int destino, char tipo);
+        int getOrigem();
+        int getDestino();
+        bool isAtaca();
+    };
  
-    Aresta(int v1, int v2);
- 
-    std::string to_string();
- };
- 
- #endif /* ARESTA_H */
+#endif /* ARESTA_H */ 
